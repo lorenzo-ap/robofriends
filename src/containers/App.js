@@ -5,13 +5,12 @@ import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 
 const App = () => {
+  const [searchValue, setSearchValue] = useState('');
+  const [robots, setRobots] = useState([]);
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users').then(resp => resp.json()).then(data => setRobots(data));
   }, []);
-
-  const [searchValue, setSearchValue] = useState('');
-  const [robots, setRobots] = useState([]);
 
   const searchChange = (event) => {
     setSearchValue(event.target.value);
