@@ -8,13 +8,13 @@ const App = () => {
   const [searchValue, setSearchValue] = useState('');
   const [robots, setRobots] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const resp = await fetch('https://jsonplaceholder.typicode.com/users');
-      const data = await resp.json();
-      setRobots(data);
-    }
+  const fetchData = async () => {
+    const resp = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await resp.json();
+    setRobots(data);
+  }
 
+  useEffect(() => {
     fetchData();
   }, []);
 

@@ -26,5 +26,9 @@ code {
 }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: #417e87;
+}
+
+::-webkit-scrollbar-thumb:active {
   background: #31555a;
 }
